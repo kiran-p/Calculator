@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery</title>
+    <link rel="stylesheet" type="text/css" href="../calculator/calculator.css"/>
+    <script type="text/javascript" src="jquery-1.8.0.js"></script>
+    <script type="text/javascript" src="jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="calculator-widget.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+        // initialize the calculator
+        var cal = $('#calc').calculator({theme:"theme"});
+        <!--cal.calculator('setFirstNumber',5);-->
+        });
+    </script>
+</head>
+<body>
+<div id="calc"></div>
+</body>
+</html>
