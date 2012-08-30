@@ -9,7 +9,7 @@
         resultField:null,
         memory:0,
         isPositive:true,
-
+        splClick:true,
         options: {
         theme:'forest'
         //default theme if nothing is specified.
@@ -88,18 +88,21 @@
             var obj= evt.data;
             // referring to the target i.e. HTML Button element
             var value = (evt.target).value;
-            console.log(obj);
             // retrieving the value from the target
             obj._handleNumber(value);
         },
         _handleNumber : function(value){
         // takes the number as argument
+            if(this.splClick==false){
+                this.resultField.val(null);
+                this.splClick=true;
+            }
             if(this.operatorClick){
                 this.resultField.val(value);
                 this.operatorClick=false;
             }else{
                 this.resultField.val(this.resultField.val()+value);
-        // appending the number input
+                // appending the number input
             }
         },
 
@@ -112,11 +115,16 @@
 
         _handleOperator : function(operator){
             // if result exists then its a second operation we need to set the  firstValueSelected to result
-            if(this.firstValueSelected !=null){
-                this.handleEqual();
-                this.firstValueSelected = this.result;
-            }else{
+
+            if(this.splClick==false){
                 this._clearAndStoreValue(true);
+            }else{
+                if(this.firstValueSelected !=null){
+                    this.handleEqual();
+                    this.firstValueSelected = this.result;
+                }else{
+                    this._clearAndStoreValue(true);
+                }
             }
             //store the value and clear the text field
             this.operatorSelected = operator;
@@ -204,17 +212,17 @@
             } else if(value=='MS'){
             // handling Memory Store
                 obj.memory=obj.resultField.val();
+                obj.splClick=false;
             } else if(value=='M+'){
             // handling Memory addition
                 var value = Number(obj.resultField.val());
-                obj.resultField.val(value);
-                console.log(typeof(obj.resultField.val()));
-                obj.memory = obj.memory + obj.resultField.val();
-                obj.resultField.val(null);
+                obj.memory = obj.memory + value;
+                obj.splClick=false;
             } else if(value=='M-'){
             // handling Memory Subtraction
-                obj.memory = obj.memory - obj.resultField.val();
-                obj.resultField.val(null);
+                var value = Number(obj.resultField.val());
+                obj.memory = obj.memory - value;
+                obj.splClick=false;
             }
         },
 
