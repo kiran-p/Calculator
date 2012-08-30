@@ -199,32 +199,38 @@
 
 
     .theme3 .number{
-        background-image: linear-gradient(bottom, rgb(242,217,223) 0%, rgb(219,35,133) 100%);
-        background-image: -o-linear-gradient(bottom, rgb(242,217,223) 0%, rgb(219,35,133) 100%);
-        background-image: -moz-linear-gradient(bottom, rgb(242,217,223) 0%, rgb(219,35,133) 100%);
-        background-image: -webkit-linear-gradient(bottom, rgb(242,217,223) 0%, rgb(219,35,133) 100%);
-        background-image: -ms-linear-gradient(bottom, rgb(242,217,223) 0%, rgb(219,35,133) 100%);
-        background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgb(242,217,223)), color-stop(1, rgb(219,35,133)) );
+    background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.38, rgb(88,200,204)),color-stop(0.69, rgb(114,246,143)));
+
     }
     .theme3 .number:nth-child(-n+6){
-            background-image: linear-gradient(bottom, rgb(199,51,32) 0%, rgb(245,218,81) 83%);
-            background-image: -o-linear-gradient(bottom, rgb(199,51,32) 0%, rgb(245,218,81) 83%);
-            background-image: -moz-linear-gradient(bottom, rgb(199,51,32) 0%, rgb(245,218,81) 83%);
-            background-image: -webkit-linear-gradient(bottom, rgb(199,51,32) 0%, rgb(245,218,81) 83%);
-            background-image: -ms-linear-gradient(bottom, rgb(199,51,32) 0%, rgb(245,218,81) 83%);
-            background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgb(199,51,32)), color-stop(0.83, rgb(245,218,81)) );
-            }
+        background-image: linear-gradient(bottom, rgb(204,204,204) 34%, rgb(250,250,250) 75%);
+        background-image: -o-linear-gradient(bottom, rgb(204,204,204) 34%, rgb(250,250,250) 75%);
+        background-image: -moz-linear-gradient(bottom, rgb(204,204,204) 34%, rgb(250,250,250) 75%);
+        background-image: -webkit-linear-gradient(bottom, rgb(204,204,204) 34%, rgb(250,250,250) 75%);
+        background-image: -ms-linear-gradient(bottom, rgb(204,204,204) 34%, rgb(250,250,250) 75%);
+    }
     .theme3 .splCharacter{
+        background-image: linear-gradient(bottom, rgb(199,51,32) 0%, rgb(245,218,81) 83%);
+        background-image: -o-linear-gradient(bottom, rgb(199,51,32) 0%, rgb(245,218,81) 83%);
+        background-image: -moz-linear-gradient(bottom, rgb(199,51,32) 0%, rgb(245,218,81) 83%);
+        background-image: -webkit-linear-gradient(bottom, rgb(199,51,32) 0%, rgb(245,218,81) 83%);
+        background-image: -ms-linear-gradient(bottom, rgb(199,51,32) 0%, rgb(245,218,81) 83%);
+        background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgb(199,51,32)), color-stop(0.83, rgb(245,218,81)) );
+    }
+
+
+    .theme3 .operator{
+        background-image: linear-gradient(bottom, rgb(204,204,204) 34%, rgb(250,250,250) 75%);
+        background-image: -o-linear-gradient(bottom, rgb(204,204,204) 34%, rgb(250,250,250) 75%);
+        background-image: -moz-linear-gradient(bottom, rgb(204,204,204) 34%, rgb(250,250,250) 75%);
+        background-image: -webkit-linear-gradient(bottom, rgb(204,204,204) 34%, rgb(250,250,250) 75%);
+        background-image: -ms-linear-gradient(bottom, rgb(204,204,204) 34%, rgb(250,250,250) 75%);
+     }
+    .theme3 .clear{
         background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.38, rgb(88,200,204)),color-stop(0.69, rgb(114,246,143)));
     }
-    .theme3 .operator{
-            background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgb(199,51,32)), color-stop(0.83, rgb(245,218,81)) );
-    }
-    .theme3 .clear{
-        background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgb(242,217,223)), color-stop(1, rgb(219,35,133)) );
-    }
     .theme3 .equalTo{
-        background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgb(242,217,223)), color-stop(1, rgb(219,35,133)) );
+        background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.38, rgb(88,200,204)),color-stop(0.69, rgb(114,246,143)));
     }
     .theme3.jq-calculator{
         border-radius:0.4em;
