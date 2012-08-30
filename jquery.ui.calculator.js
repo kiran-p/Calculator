@@ -7,19 +7,22 @@
         result :0,
         change:0,
         resultField:null,
-
+        memory:0,
+        isPositive:true,
         options: {
           theme:'theme1'
+          //default theme if nothing is specified.
         },
 
         _create: function() {
             this.element.addClass('jq-calculator');
+            // adding a class to the div element
             var o = this.options;
-            console.log(this.options);
+            // retrieving the options given
             this.element.addClass(o.theme);
+            // adding a class with the theme given
             this.resultField=$(document.createElement("input")).attr('type','text').addClass('screen').css('direction','rtl');
             this.element.append(this.resultField);
-
             var specialGrp = $(document.createElement("section")).addClass('splCharacters');
             this.element.append(specialGrp);
             var numberGrp = $(document.createElement("section")).addClass('numbers');
@@ -27,7 +30,7 @@
             var operatorGrp = $(document.createElement("section")).addClass('operators');
             this.element.append(operatorGrp);
 
-            var splButtons = ['MC','MR','MS','M+','M-','CE','Ca','^','1/x','$'];
+            var splButtons = ['MC','MR','MS','M+','M-','CE','&#177;','&#8730;','1/x','&#8592;'];
             // Handling the special buttons
             for(var i=0;i<splButtons.length;i++){
                 this._renderButtonElement('splCharacter',splButtons[i], this._handleSplClick,specialGrp);
@@ -51,7 +54,7 @@
             // Handling Clear button
             this._renderButtonElement('equalTo','=', this._handleEqualClick,operatorGrp);
             // Handling the inputs from keyboard
-            this._renderButtonElement('clear','%', this._handleClearClick,operatorGrp)
+            this._renderButtonElement('clear','%', this._handleSplClick,operatorGrp)
         } ,
 
         _renderButtonElement : function(type, value, clickHandler, sectionName){
@@ -129,7 +132,7 @@
                     this.result = this.firstValueSelected + this.secondValueSelected;
                 break;
                 case '-' :
-                    this.result = this.firstValueSelected - this.secondValueSelected;
+                    this.result =  - this.secondValueSelected + this.firstValueSelected;
                 break;
                 case '/' :
                     this.result = this.firstValueSelected / this.secondValueSelected;
@@ -161,7 +164,50 @@
             self.result = 0;
             self.operatorClick=false;
         },
-        _handleSplClick : function() {},
+        _handleSplClick : function(evt) {
+            var obj= evt.data;
+            var value = (evt.target).value;
+            // if result exists then its a second operation we need to set the  firstValueSelected to result
+//            console.log(value);
+//            console.log(obj.firstValueSelected);
+            if (value=='&#8592;'){
+                obj.resultField.val(obj.resultField.val().slice(0,-1));
+            }else if(value=='&#177;'){
+                if(obj.isPositive){
+                    obj.resultField.val('-'+obj.resultField.val());
+                    obj.isPositive=false;
+                }else{
+                    obj.resultField.val(obj.resultField.val().slice(1));
+                    obj.isPositive=true;
+                }
+            } else if(value=='CE'){
+                obj.resultField.val(null);
+            } else if(value=='1/x'){
+                obj.resultField.val(1/obj.resultField.val());
+            } else if(value=='&#8730;'){
+                obj.resultField.val(Math.sqrt(obj.resultField.val()));
+            } else if(value=='%'){
+                obj.resultField.val(obj.resultField.val()/100);
+            } else if(value=='MC'){
+                obj.memory=0;
+            } else if(value=='MR'){
+                obj.resultField.val(obj.memory);
+
+            } else if(value=='MS'){
+                obj.memory=obj.resultField.val();
+
+            } else if(value=='M+'){
+                var value = Number(obj.resultField.val());
+                obj.resultField.val(value);
+                console.log(typeof(obj.resultField.val()));
+                obj.memory = obj.memory + obj.resultField.val();
+                obj.resultField.val(null);
+            } else if(value=='M-'){
+                obj.memory = obj.memory - obj.resultField.val();
+                obj.resultField.val(null);
+            }
+
+        },
 
         destroy: function() {
             $('.number').unbind('click');

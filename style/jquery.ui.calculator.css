@@ -9,7 +9,7 @@
         border-style:double;
         -webkit-box-shadow:-5px 5px 15px 7x #000fff;
     }
-    input{
+    .jq-calculator input{
         width:185px;
         height:40px;
         margin:5px;
@@ -18,8 +18,9 @@
         border-radius:0.2em;
         background-image: -webkit-linear-gradient(bottom, #F4F7F7 22%, #CFE6E5 96%);
         background: -webkit-linear-gradient(top, #e6effa, #fff);
+        font-size:18px;
     }
-    button{
+    .jq-calculator button{
         width:32px;
         border:1px solid gray;
         height:24px;
@@ -33,36 +34,36 @@
         -webkit-transition-timing-function: ease-out;
         -moz-transition:1s;
     }
-    .number{
+    .jq-calculator .number{
         background-image: -webkit-linear-gradient(bottom, rgb(231,237,252) 31%, rgb(234,247,252) 62%);
     }
-    button:hover{
+    .jq-calculator button:hover{
         background:#F0DF6E;
     }
-    .numbers{
+    .jq-calculator .numbers{
         width:115px;
         float:left;
         color:#234675;
         font-size:20px;
     }
-    .operators{
+    .jq-calculator .operators{
         width:80px;
         float:left;
         font-size:10px;
     }
-    div button[value="0"]{
+    .jq-calculator button[value="0"]{
         width:74px;
         margin:1px;
     }
-    button[value="="]{
+    .jq-calculator button[value="="]{
         height:54px;
         font-size:20px;
     }
-    button[value="C"]{
+    .jq-calculator button[value="C"]{
         position:relative;
         top:-18px;
     }
-    button[value="%"]{
+    .jq-calculator button[value="%"]{
         position:relative;
         top:-30px;
     }
@@ -80,7 +81,7 @@
     }
     .theme1 .splCharacters button{
              width:33px;
-      }
+    }
     .theme1 .number{
         background-image: linear-gradient(bottom, rgb(88,200,204) 38%, rgb(114,246,143) 69%);
         background-image: -o-linear-gradient(bottom, rgb(88,200,204) 38%, rgb(114,246,143) 69%);
@@ -107,6 +108,9 @@
     .theme1 button{
          border-radius:0.4em;
     }
+    .theme1 button:hover{
+        background:#F0DF6E;
+    }
     .theme1 input{
         border-radius:0.6em;
         width:195px;
@@ -116,13 +120,7 @@
         background-image: -moz-linear-gradient(bottom, rgb(255,255,255) 15%, rgb(195,224,224) 100%);
         background-image: -webkit-linear-gradient(bottom, rgb(255,255,255) 15%, rgb(195,224,224) 100%);
         background-image: -ms-linear-gradient(bottom, rgb(255,255,255) 15%, rgb(195,224,224) 100%);
-        background-image: -webkit-gradient(
-            linear,
-            left bottom,
-            left top,
-            color-stop(0.15, rgb(255,255,255)),
-            color-stop(1, rgb(195,224,224))
-        );
+        background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0.15, rgb(255,255,255)), color-stop(1, rgb(195,224,224)) );
     }
 
 
@@ -136,18 +134,16 @@
         background-image: -webkit-linear-gradient(bottom, rgb(242,217,223) 0%, rgb(219,35,133) 100%);
         background-image: -ms-linear-gradient(bottom, rgb(242,217,223) 0%, rgb(219,35,133) 100%);
 
-        background-image: -webkit-gradient(
-        linear,
-        left bottom,
-        left top,
-        color-stop(0, rgb(242,217,223)),
-        color-stop(1, rgb(219,35,133))
-        );
+        background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgb(242,217,223)), color-stop(1, rgb(219,35,133)) );
     }
+
+
+
     .theme2 .splCharacter{
         background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.01, rgb(88,200,204)),color-stop(1, rgb(114,246,47)));
         background: #7fd0db;
     }
+
     .theme2 .operator{
         background-image: linear-gradient(bottom, rgb(204,204,204) 34%, rgb(250,250,250) 75%);
         background-image: -o-linear-gradient(bottom, rgb(204,204,204) 34%, rgb(250,250,250) 75%);
@@ -169,19 +165,20 @@
         background-image: -moz-linear-gradient(bottom, rgb(240,193,136) 25%, rgb(188,189,172) 63%);
         background-image: -webkit-linear-gradient(bottom, rgb(240,193,136) 25%, rgb(188,189,172) 63%);
         background-image: -ms-linear-gradient(bottom, rgb(240,193,136) 25%, rgb(188,189,172) 63%);
-        background-image: -webkit-gradient(
-        linear,
-        left bottom,
-        left top,
-        color-stop(0.25, rgb(240,193,136)),
-        color-stop(0.63, rgb(188,189,172))
-        );
+        background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0.25, rgb(240,193,136)), color-stop(0.63, rgb(188,189,172)) );
         box-shadow: 3px 3px 3px #888888;
         border-radius:2em;
+        height:270px;
+        width:195px;
     }
     .theme2 button{
-        border-radius:.8em;
+        height:30px;
+        width:30px;
+        border-radius:2.8em;
         box-shadow: 3px 3px 3px #888888;
+    }
+    .theme2 button:hover{
+        background:#657bd6;
     }
     .theme2 input{
         border-radius:1em;
@@ -191,16 +188,13 @@
         background-image: -moz-linear-gradient(bottom, rgb(239,240,170) 28%, rgb(184,184,158) 81%);
         background-image: -webkit-linear-gradient(bottom, rgb(239,240,170) 28%, rgb(184,184,158) 81%);
         background-image: -ms-linear-gradient(bottom, rgb(239,240,170) 28%, rgb(184,184,158) 81%);
-        background-image: -webkit-gradient(
-        linear,
-        left bottom,
-        left top,
-        color-stop(0.28, rgb(239,240,170)),
-        color-stop(0.81, rgb(184,184,158))
-        );
+        background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0.28, rgb(239,240,170)), color-stop(0.81, rgb(184,184,158)) );
         box-shadow: 3px 3px 3px #888888;
     }
-
+      .theme2 button[value="="]{
+            height:64px;
+            font-size:20px;
+        }
 
 
 
@@ -210,26 +204,27 @@
         background-image: -moz-linear-gradient(bottom, rgb(242,217,223) 0%, rgb(219,35,133) 100%);
         background-image: -webkit-linear-gradient(bottom, rgb(242,217,223) 0%, rgb(219,35,133) 100%);
         background-image: -ms-linear-gradient(bottom, rgb(242,217,223) 0%, rgb(219,35,133) 100%);
-        background-image: -webkit-gradient(
-        linear,
-        left bottom,
-        left top,
-        color-stop(0, rgb(242,217,223)),
-        color-stop(1, rgb(219,35,133))
-        );
+        background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgb(242,217,223)), color-stop(1, rgb(219,35,133)) );
     }
+    .theme3 .number:nth-child(-n+6){
+            background-image: linear-gradient(bottom, rgb(199,51,32) 0%, rgb(245,218,81) 83%);
+            background-image: -o-linear-gradient(bottom, rgb(199,51,32) 0%, rgb(245,218,81) 83%);
+            background-image: -moz-linear-gradient(bottom, rgb(199,51,32) 0%, rgb(245,218,81) 83%);
+            background-image: -webkit-linear-gradient(bottom, rgb(199,51,32) 0%, rgb(245,218,81) 83%);
+            background-image: -ms-linear-gradient(bottom, rgb(199,51,32) 0%, rgb(245,218,81) 83%);
+            background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgb(199,51,32)), color-stop(0.83, rgb(245,218,81)) );
+            }
     .theme3 .splCharacter{
-        background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.01, rgb(88,200,204)),color-stop(1, rgb(114,246,47)));
-        background: #7fd0db;
+        background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.38, rgb(88,200,204)),color-stop(0.69, rgb(114,246,143)));
     }
     .theme3 .operator{
-        background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.01, rgb(88,200,204)),color-stop(1, rgb(114,246,47)));
+            background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgb(199,51,32)), color-stop(0.83, rgb(245,218,81)) );
     }
     .theme3 .clear{
-        background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.01, rgb(88,200,204)),color-stop(1, rgb(114,246,47)));
+        background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgb(242,217,223)), color-stop(1, rgb(219,35,133)) );
     }
     .theme3 .equalTo{
-        background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.01, rgb(88,200,204)),color-stop(1, rgb(114,246,47)));
+        background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgb(242,217,223)), color-stop(1, rgb(219,35,133)) );
     }
     .theme3.jq-calculator{
         border-radius:0.4em;
@@ -237,6 +232,7 @@
         background:#ffffff;
         box-shadow: 3px 3px 3px #888888;
         opacity:0.75;
+        //background-image:url('image.jpg');
     }
     .theme3 button{
         border-radius:0.4em;
@@ -247,10 +243,10 @@
         background-image: -webkit-linear-gradient(bottom, rgb(204,204,204) 34%, rgb(250,250,250) 75%);
         background-image: -ms-linear-gradient(bottom, rgb(204,204,204) 34%, rgb(250,250,250) 75%);
     }
-     .theme3 button:hover{
-            background:#657bd6;
-            opacity:1;
-        }
+    .theme3 button:hover{
+        background:#657bd6;
+        opacity:1;
+    }
     .theme3 input{
         border-radius:.4em;
         width:185px;
@@ -259,13 +255,8 @@
         background-image: -moz-linear-gradient(bottom, rgb(255,255,255) 15%, rgb(195,224,224) 100%);
         background-image: -webkit-linear-gradient(bottom, rgb(255,255,255) 15%, rgb(195,224,224) 100%);
         background-image: -ms-linear-gradient(bottom, rgb(255,255,255) 15%, rgb(195,224,224) 100%);
-        background-image: -webkit-gradient(
-        linear,
-        left bottom,
-        left top,
-        color-stop(0.15, rgb(255,255,255)),
-        color-stop(1, rgb(195,224,224))
-        );
+        background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0.15, rgb(255,255,255)), color-stop(1, rgb(195,224,224)) );
+        font-size:18px;
         box-shadow: 3px 3px 3px #888888;
     }
 
@@ -293,27 +284,28 @@
     .theme4 input{
         width:108px;
         height:140px;
+        font-size:18px;
         box-shadow: 3px 3px 3px #888888;
     }
 
 
     .theme5 .number{
-     }
-     .theme5 .splCharacters{
+    }
+    .theme5 .splCharacters{
 
-     }
-     .theme5 .operator{
-     }
-     .theme5 .clear{
-     }
-     .theme5 .equalTo{
-     }
-     .theme5.jq-calculator{
-     }
-     .theme5 button{
-     }
-     .theme5 input{
-     }
+    }
+    .theme5 .operator{
+    }
+    .theme5 .clear{
+    }
+    .theme5 .equalTo{
+    }
+    .theme5.jq-calculator{
+    }
+    .theme5 button{
+    }
+    .theme5 input{
+    }
 
 
 
