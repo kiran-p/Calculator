@@ -68,21 +68,21 @@
         top:-30px;
     }
 
-    .theme1 .numbers{
+    .forest .numbers{
             width:114px;
             float:right;
             color:#234675;
             font-size:20px;
     }
-    .theme1 .operators{
+    .forest .operators{
         width:76px;
         float:left;
         font-size:10px;
     }
-    .theme1 .splCharacters button{
+    .forest .splCharacters button{
              width:33px;
     }
-    .theme1 .number{
+    .forest .number{
         background-image: linear-gradient(bottom, rgb(88,200,204) 38%, rgb(114,246,143) 69%);
         background-image: -o-linear-gradient(bottom, rgb(88,200,204) 38%, rgb(114,246,143) 69%);
         background-image: -moz-linear-gradient(bottom, rgb(88,200,204) 38%, rgb(114,246,143) 69%);
@@ -90,28 +90,28 @@
         background-image: -ms-linear-gradient(bottom, rgb(88,200,204) 38%, rgb(114,246,143) 69%);
         background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.38, rgb(88,200,204)),color-stop(0.69, rgb(114,246,143)));
     }
-    .theme1 .splCharacter{
+    .forest .splCharacter{
         background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.01, rgb(88,200,204)),color-stop(1, rgb(114,246,47)));
     }
-    .theme1 .operator{
+    .forest .operator{
         background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.01, rgb(88,200,204)),color-stop(1, rgb(114,246,47)));
     }
-    .theme1 .clear{
+    .forest .clear{
         background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.01, rgb(88,200,204)),color-stop(1, rgb(114,246,47)));
     }
-    .theme1 .equalTo{
+    .forest .equalTo{
         background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.01, rgb(88,200,204)),color-stop(1, rgb(114,246,47)));
     }
-    .theme1.jq-calculator{
+    .forest.jq-calculator{
         background-image: -webkit-linear-gradient(bottom, #A5D1D1 52%, #CFE6E5 96%);
     }
-    .theme1 button{
+    .forest button{
          border-radius:0.4em;
     }
-    .theme1 button:hover{
+    .forest button:hover{
         background:#F0DF6E;
     }
-    .theme1 input{
+    .forest input{
         border-radius:0.6em;
         width:195px;
         height:45px;
@@ -127,7 +127,7 @@
 
 
 
-    .theme2 .number{
+    .candy .number{
         background-image: linear-gradient(bottom, rgb(242,217,223) 0%, rgb(219,35,133) 100%);
         background-image: -o-linear-gradient(bottom, rgb(242,217,223) 0%, rgb(219,35,133) 100%);
         background-image: -moz-linear-gradient(bottom, rgb(242,217,223) 0%, rgb(219,35,133) 100%);
@@ -139,25 +139,25 @@
 
 
 
-    .theme2 .splCharacter{
+    .candy .splCharacter{
         background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.01, rgb(88,200,204)),color-stop(1, rgb(114,246,47)));
         background: #7fd0db;
     }
 
-    .theme2 .operator{
+    .candy .operator{
         background-image: linear-gradient(bottom, rgb(204,204,204) 34%, rgb(250,250,250) 75%);
         background-image: -o-linear-gradient(bottom, rgb(204,204,204) 34%, rgb(250,250,250) 75%);
         background-image: -moz-linear-gradient(bottom, rgb(204,204,204) 34%, rgb(250,250,250) 75%);
         background-image: -webkit-linear-gradient(bottom, rgb(204,204,204) 34%, rgb(250,250,250) 75%);
         background-image: -ms-linear-gradient(bottom, rgb(204,204,204) 34%, rgb(250,250,250) 75%);
     }
-    .theme2 .clear{
+    .candy .clear{
         background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.01, rgb(88,200,204)),color-stop(1, rgb(114,246,47)));
     }
-    .theme2 .equalTo{
+    .candy .equalTo{
          background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.01, rgb(88,200,204)),color-stop(1, rgb(114,246,47)));
     }
-    .theme2.jq-calculator{
+    .candy.jq-calculator{
         //background-image: -webkit-linear-gradient(bottom, #A5D1D1 52%, #CFE6E5 96%);
         background:#ffffff;
         background-image: linear-gradient(bottom, rgb(240,193,136) 25%, rgb(188,189,172) 63%);
@@ -171,16 +171,16 @@
         height:270px;
         width:195px;
     }
-    .theme2 button{
+    .candy button{
         height:30px;
         width:30px;
         border-radius:2.8em;
         box-shadow: 3px 3px 3px #888888;
     }
-    .theme2 button:hover{
+    .candy button:hover{
         background:#657bd6;
     }
-    .theme2 input{
+    .candy input{
         border-radius:1em;
         width:185px;
         background-image: linear-gradient(bottom, rgb(239,240,170) 28%, rgb(184,184,158) 81%);
@@ -191,25 +191,27 @@
         background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0.28, rgb(239,240,170)), color-stop(0.81, rgb(184,184,158)) );
         box-shadow: 3px 3px 3px #888888;
     }
-      .theme2 button[value="="]{
+      .candy button[value="="]{
             height:64px;
             font-size:20px;
         }
 
 
 
-    .theme3 .number{
+    .tricolor .number{
     background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.38, rgb(88,200,204)),color-stop(0.69, rgb(114,246,143)));
-
     }
-    .theme3 .number:nth-child(-n+6){
+    .tricolor .numbers,.tricolor .splCharacters{
+        margin-left:7px;
+    }
+    .tricolor .number:nth-child(-n+6){
         background-image: linear-gradient(bottom, rgb(204,204,204) 34%, rgb(250,250,250) 75%);
         background-image: -o-linear-gradient(bottom, rgb(204,204,204) 34%, rgb(250,250,250) 75%);
         background-image: -moz-linear-gradient(bottom, rgb(204,204,204) 34%, rgb(250,250,250) 75%);
         background-image: -webkit-linear-gradient(bottom, rgb(204,204,204) 34%, rgb(250,250,250) 75%);
         background-image: -ms-linear-gradient(bottom, rgb(204,204,204) 34%, rgb(250,250,250) 75%);
     }
-    .theme3 .splCharacter{
+    .tricolor .splCharacter{
         background-image: linear-gradient(bottom, rgb(199,51,32) 0%, rgb(245,218,81) 83%);
         background-image: -o-linear-gradient(bottom, rgb(199,51,32) 0%, rgb(245,218,81) 83%);
         background-image: -moz-linear-gradient(bottom, rgb(199,51,32) 0%, rgb(245,218,81) 83%);
@@ -217,30 +219,30 @@
         background-image: -ms-linear-gradient(bottom, rgb(199,51,32) 0%, rgb(245,218,81) 83%);
         background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgb(199,51,32)), color-stop(0.83, rgb(245,218,81)) );
     }
-
-
-    .theme3 .operator{
+    .tricolor .operator{
         background-image: linear-gradient(bottom, rgb(204,204,204) 34%, rgb(250,250,250) 75%);
         background-image: -o-linear-gradient(bottom, rgb(204,204,204) 34%, rgb(250,250,250) 75%);
         background-image: -moz-linear-gradient(bottom, rgb(204,204,204) 34%, rgb(250,250,250) 75%);
         background-image: -webkit-linear-gradient(bottom, rgb(204,204,204) 34%, rgb(250,250,250) 75%);
         background-image: -ms-linear-gradient(bottom, rgb(204,204,204) 34%, rgb(250,250,250) 75%);
      }
-    .theme3 .clear{
+    .tricolor .clear{
         background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.38, rgb(88,200,204)),color-stop(0.69, rgb(114,246,143)));
     }
-    .theme3 .equalTo{
+    .tricolor .equalTo{
         background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.38, rgb(88,200,204)),color-stop(0.69, rgb(114,246,143)));
     }
-    .theme3.jq-calculator{
-        border-radius:0.4em;
+    .tricolor.jq-calculator{
+        border-radius:3.0em;
         //background-image: -webkit-linear-gradient(bottom, #A5D1D1 52%, #CFE6E5 96%);
         background:#ffffff;
         box-shadow: 3px 3px 3px #888888;
         opacity:0.75;
         //background-image:url('image.jpg');
+        width:205px;
+        height:245px;
     }
-    .theme3 button{
+    .tricolor button{
         border-radius:0.4em;
         box-shadow: 3px 3px 3px #888888;
         background-image: linear-gradient(bottom, rgb(204,204,204) 34%, rgb(250,250,250) 75%);
@@ -249,11 +251,14 @@
         background-image: -webkit-linear-gradient(bottom, rgb(204,204,204) 34%, rgb(250,250,250) 75%);
         background-image: -ms-linear-gradient(bottom, rgb(204,204,204) 34%, rgb(250,250,250) 75%);
     }
-    .theme3 button:hover{
+    .tricolor button:hover{
         background:#657bd6;
         opacity:1;
     }
-    .theme3 input{
+    .tricolor .number:nth-child(-n+6):hover{
+        background:#657bd6;
+    }
+    .tricolor input{
         border-radius:.4em;
         width:185px;
         background-image: linear-gradient(bottom, rgb(255,255,255) 15%, rgb(195,224,224) 100%);
@@ -264,6 +269,8 @@
         background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0.15, rgb(255,255,255)), color-stop(1, rgb(195,224,224)) );
         font-size:18px;
         box-shadow: 3px 3px 3px #888888;
+        margin-left:8px;
+        margin-top:8px;
     }
 
 
