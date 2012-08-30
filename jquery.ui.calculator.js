@@ -9,6 +9,7 @@
         resultField:null,
         memory:0,
         isPositive:true,
+
         options: {
         theme:'forest'
         //default theme if nothing is specified.
