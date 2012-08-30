@@ -1,5 +1,4 @@
     .jq-calculator{
-
         width:195px;
         height:235px;
         padding:5px;
@@ -8,6 +7,12 @@
         border-radius:0.4em;
         border-style:double;
         -webkit-box-shadow:-5px 5px 15px 7x #000fff;
+    }
+    span{
+      position: absolute;
+      display: block;
+      left: 39px;
+      top: 44px;
     }
     .jq-calculator input{
         width:185px;
@@ -19,6 +24,7 @@
         background-image: -webkit-linear-gradient(bottom, #F4F7F7 22%, #CFE6E5 96%);
         background: -webkit-linear-gradient(top, #e6effa, #fff);
         font-size:18px;
+        z-index:-1;
     }
     .jq-calculator button{
         width:32px;
@@ -108,24 +114,11 @@
     }
     .forest.jq-calculator{
         background-image: -webkit-linear-gradient(bottom, #A5D1D1 52%, #CFE6E5 96%);
-        /* Note: This gradient may render differently in browsers that don't support the unprefixed gradient syntax */
-
-        /* IE10 Consumer Preview */
         background-image: -ms-linear-gradient(bottom right, #69C95F 0%, #EEEFEA 90%);
-
-        /* Mozilla Firefox */
         background-image: -moz-linear-gradient(bottom right, #69C95F 0%, #EEEFEA 90%);
-
-        /* Opera */
         background-image: -o-linear-gradient(bottom right, #69C95F 0%, #EEEFEA 90%);
-
-        /* Webkit (Safari/Chrome 10) */
         background-image: -webkit-gradient(linear, right bottom, left top, color-stop(0, #69C95F), color-stop(.9, #EEEFEA));
-
-        /* Webkit (Chrome 11+) */
         background-image: -webkit-linear-gradient(bottom right, #69C95F 0%, #EEEFEA 90%);
-
-        /* W3C Markup, IE10 Release Preview */
         background-image: linear-gradient(to top left, #69C95F 0%, #EEEFEA 90%);
         border-radius:0em;
     }
@@ -148,211 +141,59 @@
     }
 
 
-
-
-
-
     .bubbles .number{
-        background-image: linear-gradient(bottom, rgb(242,217,223) 0%, rgb(219,35,133) 100%);
-        background-image: -o-linear-gradient(bottom, rgb(242,217,223) 0%, rgb(219,35,133) 100%);
-        background-image: -moz-linear-gradient(bottom, rgb(242,217,223) 0%, rgb(219,35,133) 100%);
-        background-image: -webkit-linear-gradient(bottom, rgb(242,217,223) 0%, rgb(219,35,133) 100%);
-        background-image: -ms-linear-gradient(bottom, rgb(242,217,223) 0%, rgb(219,35,133) 100%);
-
-        background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgb(242,217,223)), color-stop(1, rgb(219,35,133)) );
-        /* IE10 Consumer Preview */
-        background-image: -ms-radial-gradient(center top, circle farthest-side, #FFFFFF 0%, #94ECEF 90%);
-
-        /* Mozilla Firefox */
-        background-image: -moz-radial-gradient(center top, circle farthest-side, #FFFFFF 0%, #94ECEF 90%);
-
-        /* Opera */
-        background-image: -o-radial-gradient(center top, circle farthest-side, #FFFFFF 0%, #94ECEF 90%);
-
-        /* Webkit (Safari/Chrome 10) */
-        background-image: -webkit-gradient(radial, center top, 0, center top, 487, color-stop(0, #FFFFFF), color-stop(.9, #94ECEF));
-
-        /* Webkit (Chrome 11+) */
-        background-image: -webkit-radial-gradient(center top, circle farthest-side, #FFFFFF 0%, #94ECEF 90%);
-
-        /* W3C Markup, IE10 Release Preview */
-        background-image: radial-gradient(circle farthest-side at center top, #FFFFFF 0%, #94ECEF 90%);
-        /* IE10 Consumer Preview */
         background-image: -ms-radial-gradient(center top, circle farthest-side, #FFFFFF 0%, #9EC9E9 90%);
-
-        /* Mozilla Firefox */
         background-image: -moz-radial-gradient(center top, circle farthest-side, #FFFFFF 0%, #9EC9E9 90%);
-
-        /* Opera */
         background-image: -o-radial-gradient(center top, circle farthest-side, #FFFFFF 0%, #9EC9E9 90%);
-
-        /* Webkit (Safari/Chrome 10) */
         background-image: -webkit-gradient(radial, center top, 0, center top, 487, color-stop(0, #FFFFFF), color-stop(.9, #9EC9E9));
-
-        /* Webkit (Chrome 11+) */
         background-image: -webkit-radial-gradient(center top, circle farthest-side, #FFFFFF 0%, #9EC9E9 90%);
-
-        /* W3C Markup, IE10 Release Preview */
         background-image: radial-gradient(circle farthest-side at center top, #FFFFFF 0%, #9EC9E9 90%);
     }
     .bubbles .splCharacters{
-     visibility:hidden;
-             height:0px;
+        visibility:hidden;
+        height:0px;
     }
-
-
     .bubbles .splCharacter{
         position:relative;
         left:3px;
-
-        background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.01, rgb(88,200,204)),color-stop(1, rgb(114,246,47)));
-        background: #7fd0db;
-        /* IE10 Consumer Preview */
-        background-image: -ms-radial-gradient(center top, circle farthest-side, #FFFFFF 0%, #94ECEF 90%);
-
-        /* Mozilla Firefox */
-        background-image: -moz-radial-gradient(center top, circle farthest-side, #FFFFFF 0%, #94ECEF 90%);
-
-        /* Opera */
-        background-image: -o-radial-gradient(center top, circle farthest-side, #FFFFFF 0%, #94ECEF 90%);
-
-        /* Webkit (Safari/Chrome 10) */
-        background-image: -webkit-gradient(radial, center top, 0, center top, 487, color-stop(0, #FFFFFF), color-stop(.9, #94ECEF));
-
-        /* Webkit (Chrome 11+) */
-        background-image: -webkit-radial-gradient(center top, circle farthest-side, #FFFFFF 0%, #94ECEF 90%);
-
-        /* W3C Markup, IE10 Release Preview */
-        background-image: radial-gradient(circle farthest-side at center top, #FFFFFF 0%, #94ECEF 90%);
-        /* IE10 Consumer Preview */
         background-image: -ms-radial-gradient(center top, circle farthest-side, #FFFFFF 0%, #9EC9E9 90%);
-
-        /* Mozilla Firefox */
         background-image: -moz-radial-gradient(center top, circle farthest-side, #FFFFFF 0%, #9EC9E9 90%);
-
-        /* Opera */
         background-image: -o-radial-gradient(center top, circle farthest-side, #FFFFFF 0%, #9EC9E9 90%);
-
-        /* Webkit (Safari/Chrome 10) */
         background-image: -webkit-gradient(radial, center top, 0, center top, 487, color-stop(0, #FFFFFF), color-stop(.9, #9EC9E9));
-
-        /* Webkit (Chrome 11+) */
         background-image: -webkit-radial-gradient(center top, circle farthest-side, #FFFFFF 0%, #9EC9E9 90%);
-
-        /* W3C Markup, IE10 Release Preview */
         background-image: radial-gradient(circle farthest-side at center top, #FFFFFF 0%, #9EC9E9 90%);
     }
 
     .bubbles .operator{
-        background-image: linear-gradient(bottom, rgb(204,204,204) 34%, rgb(250,250,250) 75%);
-        background-image: -o-linear-gradient(bottom, rgb(204,204,204) 34%, rgb(250,250,250) 75%);
-        background-image: -moz-linear-gradient(bottom, rgb(204,204,204) 34%, rgb(250,250,250) 75%);
-        background-image: -webkit-linear-gradient(bottom, rgb(204,204,204) 34%, rgb(250,250,250) 75%);
-        background-image: -ms-linear-gradient(bottom, rgb(204,204,204) 34%, rgb(250,250,250) 75%);
-        /* IE10 Consumer Preview */
-        background-image: -ms-radial-gradient(center top, circle farthest-side, #FFFFFF 0%, #94ECEF 90%);
-
-        /* Mozilla Firefox */
-        background-image: -moz-radial-gradient(center top, circle farthest-side, #FFFFFF 0%, #94ECEF 90%);
-
-        /* Opera */
-        background-image: -o-radial-gradient(center top, circle farthest-side, #FFFFFF 0%, #94ECEF 90%);
-
-        /* Webkit (Safari/Chrome 10) */
-        background-image: -webkit-gradient(radial, center top, 0, center top, 487, color-stop(0, #FFFFFF), color-stop(.9, #94ECEF));
-
-        /* Webkit (Chrome 11+) */
-        background-image: -webkit-radial-gradient(center top, circle farthest-side, #FFFFFF 0%, #94ECEF 90%);
-
-        /* W3C Markup, IE10 Release Preview */
-        background-image: radial-gradient(circle farthest-side at center top, #FFFFFF 0%, #94ECEF 90%);
-        /* IE10 Consumer Preview */
         background-image: -ms-radial-gradient(center top, circle farthest-side, #FFFFFF 0%, #9EC9E9 90%);
-
-        /* Mozilla Firefox */
         background-image: -moz-radial-gradient(center top, circle farthest-side, #FFFFFF 0%, #9EC9E9 90%);
-
-        /* Opera */
         background-image: -o-radial-gradient(center top, circle farthest-side, #FFFFFF 0%, #9EC9E9 90%);
-
-        /* Webkit (Safari/Chrome 10) */
         background-image: -webkit-gradient(radial, center top, 0, center top, 487, color-stop(0, #FFFFFF), color-stop(.9, #9EC9E9));
-
-        /* Webkit (Chrome 11+) */
         background-image: -webkit-radial-gradient(center top, circle farthest-side, #FFFFFF 0%, #9EC9E9 90%);
-
-        /* W3C Markup, IE10 Release Preview */
         background-image: radial-gradient(circle farthest-side at center top, #FFFFFF 0%, #9EC9E9 90%);
     }
     .bubbles .clear{
-        /* IE10 Consumer Preview */
-        background-image: -ms-radial-gradient(center top, circle farthest-side, #FFFFFF 0%, #94ECEF 90%);
-
-        /* Mozilla Firefox */
-        background-image: -moz-radial-gradient(center top, circle farthest-side, #FFFFFF 0%, #94ECEF 90%);
-
-        /* Opera */
-        background-image: -o-radial-gradient(center top, circle farthest-side, #FFFFFF 0%, #94ECEF 90%);
-
-        /* Webkit (Safari/Chrome 10) */
-        background-image: -webkit-gradient(radial, center top, 0, center top, 487, color-stop(0, #FFFFFF), color-stop(.9, #94ECEF));
-
-        /* Webkit (Chrome 11+) */
-        background-image: -webkit-radial-gradient(center top, circle farthest-side, #FFFFFF 0%, #94ECEF 90%);
-
-        /* W3C Markup, IE10 Release Preview */
-        background-image: radial-gradient(circle farthest-side at center top, #FFFFFF 0%, #94ECEF 90%);
-        /* IE10 Consumer Preview */
         background-image: -ms-radial-gradient(center top, circle farthest-side, #FFFFFF 0%, #9EC9E9 90%);
-
-        /* Mozilla Firefox */
         background-image: -moz-radial-gradient(center top, circle farthest-side, #FFFFFF 0%, #9EC9E9 90%);
-
-        /* Opera */
         background-image: -o-radial-gradient(center top, circle farthest-side, #FFFFFF 0%, #9EC9E9 90%);
-
-        /* Webkit (Safari/Chrome 10) */
         background-image: -webkit-gradient(radial, center top, 0, center top, 487, color-stop(0, #FFFFFF), color-stop(.9, #9EC9E9));
-
-        /* Webkit (Chrome 11+) */
         background-image: -webkit-radial-gradient(center top, circle farthest-side, #FFFFFF 0%, #9EC9E9 90%);
-
-        /* W3C Markup, IE10 Release Preview */
         background-image: radial-gradient(circle farthest-side at center top, #FFFFFF 0%, #9EC9E9 90%);}
-        .bubbles .equalTo{
+    .bubbles .equalTo{
         background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.01, rgb(88,200,204)),color-stop(1, rgb(114,246,47)));
-        /* IE10 Consumer Preview */
         background-image: -ms-radial-gradient(center top, circle farthest-side, #FFFFFF 0%, #9EC9E9 90%);
-
-        /* Mozilla Firefox */
         background-image: -moz-radial-gradient(center top, circle farthest-side, #FFFFFF 0%, #9EC9E9 90%);
-
-        /* Opera */
         background-image: -o-radial-gradient(center top, circle farthest-side, #FFFFFF 0%, #9EC9E9 90%);
-
-        /* Webkit (Safari/Chrome 10) */
         background-image: -webkit-gradient(radial, center top, 0, center top, 487, color-stop(0, #FFFFFF), color-stop(.9, #9EC9E9));
-
-        /* Webkit (Chrome 11+) */
         background-image: -webkit-radial-gradient(center top, circle farthest-side, #FFFFFF 0%, #9EC9E9 90%);
-
-        /* W3C Markup, IE10 Release Preview */
         background-image: radial-gradient(circle farthest-side at center top, #FFFFFF 0%, #9EC9E9 90%);
     }
     .bubbles.jq-calculator{
-        //background-image: -webkit-linear-gradient(bottom, #A5D1D1 52%, #CFE6E5 96%);
-        // background:#ffffff;
-        //background-image: linear-gradient(bottom, rgb(240,193,136) 25%, rgb(188,189,172) 63%);
-        // background-image: -o-linear-gradient(bottom, rgb(240,193,136) 25%, rgb(188,189,172) 63%);
-        // background-image: -moz-linear-gradient(bottom, rgb(240,193,136) 25%, rgb(188,189,172) 63%);
-        // background-image: -webkit-linear-gradient(bottom, rgb(240,193,136) 25%, rgb(188,189,172) 63%);
-        // background-image: -ms-linear-gradient(bottom, rgb(240,193,136) 25%, rgb(188,189,172) 63%);
-        // background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0.25, rgb(240,193,136)), color-stop(0.63, rgb(188,189,172)) );
         box-shadow: 3px 3px 3px #888888;
         border-radius:1em;
         height:200px;
         width:195px;
-        background-image:url('image.jpg');
+        background-image:url('image6.jpg');
         opacity:0.75;
     }
     .bubbles button{
@@ -367,59 +208,24 @@
     .bubbles input{
         border-radius:1em;
         width:185px;
-        background-image: linear-gradient(bottom, rgb(239,240,170) 28%, rgb(184,184,158) 81%);
-        background-image: -o-linear-gradient(bottom, rgb(239,240,170) 28%, rgb(184,184,158) 81%);
-        background-image: -moz-linear-gradient(bottom, rgb(239,240,170) 28%, rgb(184,184,158) 81%);
-        background-image: -webkit-linear-gradient(bottom, rgb(239,240,170) 28%, rgb(184,184,158) 81%);
-        background-image: -ms-linear-gradient(bottom, rgb(239,240,170) 28%, rgb(184,184,158) 81%);
-        background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0.28, rgb(239,240,170)), color-stop(0.81, rgb(184,184,158)) );
-        box-shadow: 3px 3px 3px #888888;
-        /* IE10 Consumer Preview */
-        background-image: -ms-radial-gradient(center top, circle farthest-side, #FFFFFF 0%, #9EC9E9 90%);
-
-        /* Mozilla Firefox */
-        background-image: -moz-radial-gradient(center top, circle farthest-side, #FFFFFF 0%, #9EC9E9 90%);
-
-        /* Opera */
-        background-image: -o-radial-gradient(center top, circle farthest-side, #FFFFFF 0%, #9EC9E9 90%);
-
-        /* Webkit (Safari/Chrome 10) */
-        background-image: -webkit-gradient(radial, center top, 0, center top, 487, color-stop(0, #FFFFFF), color-stop(.9, #9EC9E9));
-
-        /* Webkit (Chrome 11+) */
-        background-image: -webkit-radial-gradient(center top, circle farthest-side, #FFFFFF 0%, #9EC9E9 90%);
-
-        /* W3C Markup, IE10 Release Preview */
-        background-image: radial-gradient(circle farthest-side at center top, #FFFFFF 0%, #9EC9E9 90%);
+        background:#ffffff;
     }
     .bubbles button[value="="]{
         height:64px;
         font-size:20px;
         position:relative;
         top:4px;
-        /* IE10 Consumer Preview */
         background-image: -ms-radial-gradient(center top, circle farthest-side, #FFFFFF 0%, #9EC9E9 90%);
-
-        /* Mozilla Firefox */
         background-image: -moz-radial-gradient(center top, circle farthest-side, #FFFFFF 0%, #9EC9E9 90%);
-
-        /* Opera */
         background-image: -o-radial-gradient(center top, circle farthest-side, #FFFFFF 0%, #9EC9E9 90%);
-
-        /* Webkit (Safari/Chrome 10) */
         background-image: -webkit-gradient(radial, center top, 0, center top, 487, color-stop(0, #FFFFFF), color-stop(.9, #9EC9E9));
-
-        /* Webkit (Chrome 11+) */
         background-image: -webkit-radial-gradient(center top, circle farthest-side, #FFFFFF 0%, #9EC9E9 90%);
-
-        /* W3C Markup, IE10 Release Preview */
         background-image: radial-gradient(circle farthest-side at center top, #FFFFFF 0%, #9EC9E9 90%);
     }
     .bubbles button[value="0"]{
         width:69px;
         margin:1px;
     }
-    
     .bubbles button[value="C"]{
         position:relative;
         top:-18px;
@@ -467,30 +273,14 @@
     }
     .tricolor.jq-calculator{
         border-radius:2.0em;
-        //background-image: -webkit-linear-gradient(bottom, #A5D1D1 52%, #CFE6E5 96%);
-        background:#ffffff;
-        /* Note: This gradient may render differently in browsers that don't support the unprefixed gradient syntax */
-
-        /* IE10 Consumer Preview */
         background-image: -ms-linear-gradient(bottom left, #85FF78 0%, #FFFFFF 50%, #EFB569 90%);
-
-        /* Mozilla Firefox */
         background-image: -moz-linear-gradient(bottom left, #85FF78 0%, #FFFFFF 50%, #EFB569 90%);
-
-        /* Opera */
         background-image: -o-linear-gradient(bottom left, #85FF78 0%, #FFFFFF 50%, #EFB569 90%);
-
-        /* Webkit (Safari/Chrome 10) */
         background-image: -webkit-gradient(linear, left bottom, right top, color-stop(0, #85FF78), color-stop(0.5, #FFFFFF), color-stop(.9, #EFB569));
-
-        /* Webkit (Chrome 11+) */
         background-image: -webkit-linear-gradient(bottom left, #85FF78 0%, #FFFFFF 50%, #EFB569 90%);
-
-        /* W3C Markup, IE10 Release Preview */
         background-image: linear-gradient(to top right, #85FF78 0%, #FFFFFF 50%, #EFB569 90%);
         box-shadow: 3px 3px 3px #888888;
         opacity:0.75;
-        //background-image:url('image.jpg');
         width:205px;
         height:245px;
     }

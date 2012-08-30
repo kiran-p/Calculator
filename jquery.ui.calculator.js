@@ -4,12 +4,13 @@
         secondValueSelected:0,
         operatorSelected: null,
         operatorClick:false,
-        result :0,
+        result :null,
         change:0,
         resultField:null,
         memory:0,
         isPositive:true,
         splClick:true,
+        memoryField:null,
         options: {
         theme:'forest'
         //default theme if nothing is specified.
@@ -25,6 +26,10 @@
             this.resultField=$(document.createElement("input")).attr('type','text').addClass('screen').css('direction','rtl');
             // creating an input field for output screen
             this.element.append(this.resultField);
+            var span = $(document.createElement("span"));
+            // creating an input field for output screen
+            this.element.append(span);
+            this.memoryField = span;
             // appending it to the parent element
             var specialGrp = $(document.createElement("section")).addClass('splCharacters');
             // a group for the special characters
@@ -168,7 +173,11 @@
         handleEqual : function(){
             this._clearAndStoreValue(false);
             this._setCalculatedResult();
-            this.resultField.val(this.result);
+            if(this.result!=null){
+                this.resultField.val(this.result);
+            }else{
+                this.resultField.val(this.secondValueSelected);
+            }
             this.operatorClick = true;
             this.firstValueSelected=0;
 //            this.secondValueSelected=0;
@@ -208,26 +217,31 @@
             } else if(value=='MC'){
             // handling Clear Memory
                 obj.memory=0;
+                obj.memoryField.text('');
             } else if(value=='MR'){
             // handling Memory Recall
                 obj.resultField.val(obj.memory);
                 obj.firstValueSelected=0;
                 obj.secondValueSelected=0;
+                obj.memoryField.text('M');
             } else if(value=='MS'){
             // handling Memory Store
                 var value = Number(obj.resultField.val());
                 obj.memory=value;
                 obj.splClick=false;
+                obj.memoryField.text('M');
             } else if(value=='M+'){
             // handling Memory addition
                 var value = Number(obj.resultField.val());
                 obj.memory = obj.memory + value;
                 obj.splClick=false;
+                obj.memoryField.text('M');
             } else if(value=='M-'){
             // handling Memory Subtraction
                 var value = Number(obj.resultField.val());
                 obj.memory = obj.memory - value;
                 obj.splClick=false;
+                obj.memoryField.text('M');
             }
         },
 
