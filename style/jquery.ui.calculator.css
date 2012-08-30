@@ -152,7 +152,7 @@
 
 
 
-    .candy .number{
+    .bubbles .number{
         background-image: linear-gradient(bottom, rgb(242,217,223) 0%, rgb(219,35,133) 100%);
         background-image: -o-linear-gradient(bottom, rgb(242,217,223) 0%, rgb(219,35,133) 100%);
         background-image: -moz-linear-gradient(bottom, rgb(242,217,223) 0%, rgb(219,35,133) 100%);
@@ -195,13 +195,13 @@
         /* W3C Markup, IE10 Release Preview */
         background-image: radial-gradient(circle farthest-side at center top, #FFFFFF 0%, #9EC9E9 90%);
     }
-    .candy .splCharacters{
+    .bubbles .splCharacters{
      visibility:hidden;
              height:0px;
     }
 
 
-    .candy .splCharacter{
+    .bubbles .splCharacter{
         position:relative;
         left:3px;
 
@@ -243,7 +243,7 @@
         background-image: radial-gradient(circle farthest-side at center top, #FFFFFF 0%, #9EC9E9 90%);
     }
 
-    .candy .operator{
+    .bubbles .operator{
         background-image: linear-gradient(bottom, rgb(204,204,204) 34%, rgb(250,250,250) 75%);
         background-image: -o-linear-gradient(bottom, rgb(204,204,204) 34%, rgb(250,250,250) 75%);
         background-image: -moz-linear-gradient(bottom, rgb(204,204,204) 34%, rgb(250,250,250) 75%);
@@ -284,7 +284,7 @@
         /* W3C Markup, IE10 Release Preview */
         background-image: radial-gradient(circle farthest-side at center top, #FFFFFF 0%, #9EC9E9 90%);
     }
-    .candy .clear{
+    .bubbles .clear{
         /* IE10 Consumer Preview */
         background-image: -ms-radial-gradient(center top, circle farthest-side, #FFFFFF 0%, #94ECEF 90%);
 
@@ -319,7 +319,7 @@
 
         /* W3C Markup, IE10 Release Preview */
         background-image: radial-gradient(circle farthest-side at center top, #FFFFFF 0%, #9EC9E9 90%);}
-        .candy .equalTo{
+        .bubbles .equalTo{
         background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.01, rgb(88,200,204)),color-stop(1, rgb(114,246,47)));
         /* IE10 Consumer Preview */
         background-image: -ms-radial-gradient(center top, circle farthest-side, #FFFFFF 0%, #9EC9E9 90%);
@@ -339,7 +339,7 @@
         /* W3C Markup, IE10 Release Preview */
         background-image: radial-gradient(circle farthest-side at center top, #FFFFFF 0%, #9EC9E9 90%);
     }
-    .candy.jq-calculator{
+    .bubbles.jq-calculator{
         //background-image: -webkit-linear-gradient(bottom, #A5D1D1 52%, #CFE6E5 96%);
         // background:#ffffff;
         //background-image: linear-gradient(bottom, rgb(240,193,136) 25%, rgb(188,189,172) 63%);
@@ -355,16 +355,16 @@
         background-image:url('image.jpg');
         opacity:0.75;
     }
-    .candy button{
+    .bubbles button{
         height:30px;
         width:30px;
         border-radius:2.8em;
         box-shadow: 3px 3px 3px #888888;
     }
-    .candy button:hover{
+    .bubbles button:hover{
         background:#657bd6;
     }
-    .candy input{
+    .bubbles input{
         border-radius:1em;
         width:185px;
         background-image: linear-gradient(bottom, rgb(239,240,170) 28%, rgb(184,184,158) 81%);
@@ -392,7 +392,7 @@
         /* W3C Markup, IE10 Release Preview */
         background-image: radial-gradient(circle farthest-side at center top, #FFFFFF 0%, #9EC9E9 90%);
     }
-    .candy button[value="="]{
+    .bubbles button[value="="]{
         height:64px;
         font-size:20px;
         position:relative;
@@ -415,16 +415,16 @@
         /* W3C Markup, IE10 Release Preview */
         background-image: radial-gradient(circle farthest-side at center top, #FFFFFF 0%, #9EC9E9 90%);
     }
-    .candy button[value="0"]{
+    .bubbles button[value="0"]{
         width:69px;
         margin:1px;
     }
     
-    .candy button[value="C"]{
+    .bubbles button[value="C"]{
         position:relative;
         top:-18px;
     }
-    .candy button[value="%"]{
+    .bubbles button[value="%"]{
         position:relative;
         top:-34px;
     }

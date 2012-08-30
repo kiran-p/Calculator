@@ -170,6 +170,8 @@
             this._setCalculatedResult();
             this.resultField.val(this.result);
             this.operatorClick = true;
+            this.firstValueSelected=0;
+//            this.secondValueSelected=0;
         },
 
         _handleClearClick : function(evt) {
@@ -209,9 +211,12 @@
             } else if(value=='MR'){
             // handling Memory Recall
                 obj.resultField.val(obj.memory);
+                obj.firstValueSelected=0;
+                obj.secondValueSelected=0;
             } else if(value=='MS'){
             // handling Memory Store
-                obj.memory=obj.resultField.val();
+                var value = Number(obj.resultField.val());
+                obj.memory=value;
                 obj.splClick=false;
             } else if(value=='M+'){
             // handling Memory addition
