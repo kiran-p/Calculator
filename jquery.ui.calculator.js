@@ -12,7 +12,8 @@
         splClick:true,
         memoryField:null,
         options: {
-        theme:'forest'
+        theme:'forest',
+        inputLength:16
         //default theme if nothing is specified.
         },
 
@@ -66,8 +67,6 @@
             this._renderButtonElement('equalTo','=', this._handleEqualClick,operatorGrp);
             // Handling the inputs from keyboard
             this._renderButtonElement('clear','%', this._handleSplClick,operatorGrp)
-            console.log(document);
-            console.log(this.element);
             $(document).live('keypress', this, this._handleKeyPress);
         } ,
 
@@ -81,9 +80,6 @@
         _handleKeyPress: function(evt){
             var obj = evt.data;
             var keyCode = evt.which;
-            console.log(keyCode);
-            console.log(obj);
-            console.log(obj.resultField);
             // getting the key code of the key pressed
             var value = String.fromCharCode(keyCode);
             // retrieving the character from the key code
@@ -105,7 +101,6 @@
                 }
                 obj.operatorSelected = value;
                 obj.operatorClick = true;
-
             }else if((keyCode==61)||(keyCode==13)){
             // handling '=' key and 'enter' key
                  obj.handleEqual();
@@ -138,6 +133,7 @@
         },
         _handleNumber : function(value){
         // takes the number as argument
+            var len = this.options;
             if(this.splClick==false){
                 this.resultField.val(null);
                 this.splClick=true;
@@ -146,8 +142,10 @@
                 this.resultField.val(value);
                 this.operatorClick=false;
             }else{
-                this.resultField.val(this.resultField.val()+value);
-                // appending the number input
+                if(this.resultField.val().length<len.inputLength){
+                    this.resultField.val(this.resultField.val()+value);
+                    // appending the number input
+                }
             }
         },
 
@@ -219,7 +217,7 @@
                 this.resultField.val(this.secondValueSelected);
             }
             this.operatorClick = true;
-            this.firstValueSelected=0;
+            this.firstValueSelected=null;
 //            this.secondValueSelected=0;
         },
 
