@@ -66,6 +66,9 @@
             this._renderButtonElement('equalTo','=', this._handleEqualClick,operatorGrp);
             // Handling the inputs from keyboard
             this._renderButtonElement('clear','%', this._handleSplClick,operatorGrp)
+            console.log(document);
+            console.log(this.element);
+            $(document).live('keypress', this, this._handleKeyPress);
         } ,
 
         _renderButtonElement : function(type, value, clickHandler, sectionName){
@@ -73,6 +76,43 @@
             var btn=$(document.createElement("Button")).attr('value',value).addClass(type).html(value);
             $(btn).on('click', this, clickHandler);
             $(sectionName).append(btn);
+        },
+
+        _handleKeyPress: function(evt){
+            var obj = evt.data;
+            var keyCode = evt.which;
+            console.log(keyCode);
+            console.log(obj);
+            console.log(obj.resultField);
+            // getting the key code of the key pressed
+            var value = String.fromCharCode(keyCode);
+            // retrieving the character from the key code
+            if((keyCode>=48 && keyCode<=57)||(keyCode==46)){
+            // handling the number keys and '.' key
+                if(obj.operatorClick){
+                    obj.resultField.val(value);
+                    obj.operatorClick=false;
+                }else{
+                    obj.resultField.val(obj.resultField.val()+value);
+                }
+            } else if(keyCode==42||keyCode==43||keyCode==45||keyCode==47){
+            // handling the operator keys
+                if(obj.firstValueSelected != null ){
+                    obj.handleEqual();
+                    obj.firstValueSelected = obj.result;
+                }else{
+                    obj._clearAndStoreValue(true);
+                }
+                obj.operatorSelected = value;
+                obj.operatorClick = true;
+
+            }else if((keyCode==61)||(keyCode==13)){
+            // handling '=' key and 'enter' key
+                 obj.handleEqual();
+            }else if(keyCode==67||keyCode==99){
+            // handling 'c' and 'C' for clearing the screen
+                obj._handleClearClick(evt);
+            }
         },
 
         setFirstNumber: function(number){
@@ -190,7 +230,7 @@
             self.firstValueSelected = null;
             self.secondValueSelected = 0;
             self.operatorSelected = null;
-            self.result = 0;
+            self.result = null;
             self.operatorClick=false;
         },
         _handleSplClick : function(evt) {
