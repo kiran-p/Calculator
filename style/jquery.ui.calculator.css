@@ -314,6 +314,18 @@
         margin-left:8px;
         margin-top:8px;
     }
+    .tricolor .splCharacter:first-child{
+        border-top-left-radius:1em;
+    }
+    .tricolor .splCharacter:nth-child(5){
+        border-top-right-radius:1em;
+    }
+    .tricolor button[value="0"]{
+        border-bottom-left-radius:1em;
+    }
+    .tricolor button[value="="]{
+        border-bottom-right-radius:.8em;
+    }
 
 
     .theme4 .number{
